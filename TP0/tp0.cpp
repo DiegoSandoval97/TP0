@@ -290,48 +290,11 @@ void operar(istream *is, ostream *os)
 
 int main(int argc, char * const argv[])
 {
-  cmdline cmdl(options);	// Objeto con parametro tipo option_t (struct) declarado globalmente. Ver l�nea 51 main.cc
+
+	cmdline cmdl(options);	// Objeto con parametro tipo option_t (struct) declarado globalmente. Ver l�nea 51 main.cc
 	cmdl.parse(argc, argv); // Metodo de parseo de la clase cmdline
-  //operar(iss, oss);	    // Funci�n externa, no es un metodo de ninguna clase o estructura usada en el c�digo
-  bignum u;
-  u = "-5";
-  bignum v;   
-  v= "-9"; 
-  bignum b;
-  b = mult2(u,v);
-  cout<<"el resultado es "<<b<<endl;
+  operar(iss, oss);	    // Funci�n externa, no es un metodo de ninguna clase o estructura usada en el c�digo
 
-/*   // PRUEBA a/s , a%s, truelen y llenar
-  bignum w;
-  w="000";
-  b = w-v-v;
-  cout<<"asdasd "<<b<<endl;
-  bignum a;
-  a="12345678987654321";
-  int s = 17;  
-  //bignum b;
-  b = a/s;
-  cout << "b es a/s " << "debería valer: 1234, y es: " << b <<endl;
-  bignum c;
-  c = a % s;
-  cout << "c es a%s " << "debería ser: 567, y es: "<< c <<endl;
-  *oss <<"Se realizará llenar" << endl;
-  bignum g = llenar(a,8);
-  *oss <<"Se realizó llenar " << g << endl;
 
-  bignum d;
-  d = "015";
-  *oss <<"Se realizará llenar" << endl;
-  g = llenar(d,8);
-  *oss <<"Se realizará truelen" << endl;
-  *oss <<"Se realizó llenar " << g << endl;
-  bignum f = truelen(d);
-  *oss << "Se realizó truelen " << f << endl;
-//  bignum h = shift1(d,10);
-//  *oss << "Se realizó shift " << h << endl;
-  bignum l;
-  l = "5";
-  cout << d-l-(l+l*l) << endl;
-  */
   return 0;
 }

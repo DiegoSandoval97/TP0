@@ -1,0 +1,32 @@
+//saca los ceros a izquierda y corrige el len
+bignum truelen(const bignum& right){
+  int i;
+  bignum res(1);
+  for( i=0;  i<right.len && right.digits[i]==0   ; i++);
+
+  if(i==right.len){
+    //corto al recorrer todo right, entonces rights=0
+    res.signo=right.signo;
+    return res;
+  }
+  else if(i==0){
+    //cortó en la primera y el número es correcto
+    res = right;
+    return res;
+  }
+  else{
+    //el numero tiene ceros adelante
+    //achicar digits y ajustar len de res
+    unsigned short *aux;
+    aux=new unsigned short[right.len-i];
+    delete[]res.digits;
+    res.len=right.len-i;
+    res.digits=aux;
+    res.signo = right.signo;
+    for(int j=0; j<res.len; j++)
+    {
+      res.digits[j]=right.digits[i+j];
+    }
+    return res;
+  }
+}

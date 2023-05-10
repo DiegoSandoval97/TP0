@@ -1,0 +1,96 @@
+bool operator<(const bignum& a, const bignum& b)
+{ //signos distintos
+  if(!a.signo && b.signo){
+    return true;
+  }
+  else if(a.signo && !b.signo){
+    return false;
+  }
+  //ambos positivos
+  else if(a.signo && b.signo){ 
+    if(a.len<b.len)
+      return true;
+    else if(b.len<a.len)
+      return false;
+    //son de mismo largo 
+    else{
+      for(int i=0; i<a.len; i++)
+      {
+        if(a.digits[i]<b.digits[i]){
+          return true;
+        }else if(b.digits[i]<a.digits[i])
+          return false;
+      }
+      return false; //son iguales
+    }
+  }
+  //ambos negativos
+  else{
+    if(a.len>b.len)
+      return true;
+    else if(b.len>a.len)
+      return false;
+    //son de mismo largo 
+    else{
+      for(int i=0; i<a.len; i++)
+      {
+        if(a.digits[i]>b.digits[i]){
+          return true;
+        }else if(b.digits[i]>a.digits[i])
+          {return false;}
+      }
+      return false;  //son iguales
+    }      
+  }
+}
+
+
+
+
+
+
+bool operator>(const bignum& a, const bignum& b)
+{
+  if(!a.signo && b.signo){
+    return false;
+  }
+  else if(a.signo && !b.signo){
+    return true;
+  }  
+  
+  //ambos positivos
+  else if(a.signo && b.signo){ 
+    if(a.len>b.len)
+      return true;
+    else if(b.len>a.len)
+      return false;
+    else{
+      for(int i=0; i<a.len; i++)
+      {
+        if(a.digits[i]>b.digits[i]){
+          return true;
+        }else if(b.digits[i]>a.digits[i])
+          return false;
+      }
+    }
+    return false;
+  }
+  //Ambos negativos
+  else{
+    if(a.len>b.len)
+      return false;
+    else if(b.len>a.len)
+      return true;
+    //son de mismo largo  
+    else{
+      for(int i=0; i<a.len; i++)
+      {
+        if(a.digits[i]>b.digits[i]){
+          return false;
+        }else if(b.digits[i]>a.digits[i])
+          {return true;}
+      }
+      return false;  //son iguales
+    }      
+  }  
+}

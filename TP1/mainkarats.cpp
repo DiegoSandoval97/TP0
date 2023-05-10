@@ -309,71 +309,20 @@ int main(int argc, char * const argv[])
   //*oss<<"Resultado es "<<c<<endl;
   b = mult2(u,v);
   cout<<"el resultado es "<<b<<endl;
-  /*
-  //paso a paso mult2
-  bignum c = shift1(u,2);
-  //c= mult2(a,b);
-  //cout << "c es "<< c <<endl;
-  //cout << shift1(shift1(u-v,4),4)<<endl;
-  bignum vaux = llenar(v,2);
-  int n = 3; //deberían ser iguales
-  cout << "n "<< n << endl;  
-  int L = 1;
-  if(n>L){
-    int s = n/2;
-    cout << "s "<< s << endl;
-
-    bignum w = u/s; //13
-    cout << "u/s "<< w << endl;
-    bignum x = u%s; //3
-    cout << "u%s "<< x << endl;
-    bignum y = vaux/s; //00
-    cout << "v/s "<< y << endl;
-    bignum z = vaux%s; //1
-    cout << "v%s "<< z << endl;
-    //mult de r
-    bignum u1 = w+x; //16
-    cout << "w+x=16? es "<< u1<<endl;
-    bignum v1 = y+z; //1
-    cout << "y+z=1? es "<< v1<<endl;
-    bignum v1aux = llenar(v1,1); //01
-    n = 2;
-    if(n>L){
-      s = n/2;
-      cout << "s "<< s << endl;
-
-      bignum w1 = u1/s;
-      cout << "u/s=1? es "<< w1 << endl;
-      bignum x1 = u1%s;
-      cout << "u%s=6? es "<< x1 << endl;
-      bignum y1 = v1aux/s;
-      cout << "v/s=0? es "<< y1 << endl;
-      bignum z1 = v1aux%s;
-      cout << "v%s=1? es "<< z1 << endl;
-      //mult segundo r
-      bignum u2 = w1+x1; //7
-      cout << "w+x=7? es "<< u1<<endl;
-      bignum v2 = y1+z1; //1
-      cout << "y+z=1? es "<< v2<<endl;
-      n = 1; //no entra al if
-      //devuelve r1 = 7*1, p1=1*0. q1=6*1
-      //shiftp= 00,shiftr1-q1-p=100+q1=6==106
-    }
-  }
-  */
 
 
-  /* PRUEBA a/s , a%s
+  /* //PRUEBA a/s , a%s
   bignum a;
-  a="11";
+  a="20";
+  int s =1;
   bignum b;
   b = a/s;
-  cout << "a " << "debería ser: 2, y es:"<<a <<endl;
+  cout << "a " << "debería ser: 20, y es:"<<a <<endl;
   //cout << s <<endl;
-  cout << "b es a/s " << "debería ser: 0, y es:" << b <<endl;
+  cout << "b es a/s " << "debería ser: 2, y es:" << b <<endl;
   bignum c;
   c = a % s;
-  cout << "a%s " << "debería ser: sin contenido, y es:"<< c <<endl;
+  cout << "a%s " << "debería ser: 0, y es:"<< c <<endl;
   */
 
   /*

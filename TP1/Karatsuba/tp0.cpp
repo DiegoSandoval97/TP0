@@ -292,11 +292,10 @@ int main(int argc, char * const argv[])
 {
   cmdline cmdl(options);	// Objeto con parametro tipo option_t (struct) declarado globalmente. Ver l�nea 51 main.cc
 	cmdl.parse(argc, argv); // Metodo de parseo de la clase cmdline
-  //operar(iss, oss);	    // Funci�n externa, no es un metodo de ninguna clase o estructura usada en el c�digo
   bignum u;
-  u = "-5";
+  u = "-00123456789";
   bignum v;   
-  v= "-9"; 
+  v= "90"; 
   bignum b;
   b = mult2(u,v);
   cout<<"el resultado es "<<b<<endl;
@@ -333,5 +332,8 @@ int main(int argc, char * const argv[])
   l = "5";
   cout << d-l-(l+l*l) << endl;
   */
+  /*
+  operar(iss, oss);	    // Funci�n externa, no es un metodo de ninguna clase o estructura usada en el c�digo
+ */
   return 0;
 }
